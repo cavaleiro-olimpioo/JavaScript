@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 3em;
+            text-align: center;
+            width: 1000px;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = String(window.prompt('Qual seu nome? '))
+        var sobren = String(window.prompt('Qual seu sobrenome? '))
+        document.write(`<p>Seja bem vindo(a)<strong> ${nome} ${sobren}</strong>! Seu nome tem ${nome.length} letras e seu sobrenome tem ${sobren.length} letras, seu nome em teras maiúsculas é ${nome.toUpperCase()} ${sobren.toUpperCase()} e em minúsculo fica ${nome.toLowerCase()} ${sobren.toLowerCase()}! </p>`)
+    </script>
+</body>
+</html>
