@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        main{
+            margin: 25px ;
+            background-color: green;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>Interaja...</p>
+        
+    </main>
+    <script>
+        var div = window.document.getElementsByTagName('main')[0]
+        div.addEventListener('click', clicar)
+        div.addEventListener('mouseenter', hover)
+        div.addEventListener('mouseout', exit)
+
+
+        function clicar(){
+            div.style.background = 'blue'
+            div.style.color = 'white'
+            div.innerText = 'Clicou!'
+        }
+        function hover(){
+            div.style.background = 'yellow'
+            div.style.color = 'black'
+            div.innerText = 'Entrou!'
+        }
+        function exit(){
+            div.style.background = 'green'
+            div.style.color = 'white'
+            div.innerText = 'Saiu!'
+        }
+    </script>
+</body>
+</html>
+ 
