@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de velocidade</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ececec;
+        }
+
+        input#ip{
+            width: 100px;
+            margin-left:10px;
+        }
+
+        main{
+            margin: auto;
+            text-align: center;
+            margin-top: 50vh;
+            background-color: white;
+            border: 1px solid black;
+            padding: 30px;
+            width: 500px;
+        }
+
+        p{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Calculo de multas</h1>
+        <label for="ivel">Qual é a sua velocidade?</label>
+        <input type="number" name="vel" id="ivel">
+        <input type="button" value="Enviar" onclick="enviar()"> <br>
+        <div id="res"></div>
+    </main>
+    <script>
+        function enviar() {
+            var ivel = document.querySelector('input#ivel');
+            var p = document.querySelector('div#res');
+            var vel = Number(ivel.value);
+
+            if (vel > 60) {
+                p.innerHTML = `<p>Sua velocidade ultrapassou 60km, chegando a <strong>${vel}km</strong>! VOCÊ FOI MULTADO.</p>`;
+            } else {
+                p.innerHTML = `<p>Sua velocidade foi de <strong>${vel}km</strong>. Você está nos limites, continue assim!</p>`;
+            }
+            p.innerHTML += '<p>Use sempre cinto de segurança!</p>';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de país</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ececec;
+        }
+
+        input#ip{
+            width: 100px;
+            margin-left:10px;
+        }
+
+        main{
+            margin: auto;
+            text-align: center;
+            margin-top: 50vh;
+            background-color: white;
+            border: 1px solid black;
+            padding: 30px;
+            width: 500px;
+        }
+
+        p{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <main>
+        <h1>De onde você vem?</h1>
+        <label for="ipais">De que país você é? </label>
+        <input type="text" name="txtpais" id="txtpais">
+        <input type="button" value="Enviar" onclick="enviar()">
+        <p id="res1"></p> 
+        <p id="res2"></p> 
+    </main>
+    <script>
+        function enviar(){
+            var txtpais = document.querySelector('input#txtpais')
+            var pais = String(txtpais.value)
+            var res1 = document.querySelector('p#res1')
+            var res2 = document.querySelector('p#res2')
+
+
+            if (pais == 'brasil'){
+                res1.innerHTML = `<p>Você mora no <strong>${pais}!</strong></p>`
+                res2.innerHTML = `<p>Você é meu brother!</p>`
+            }else{
+                res1.innerHTML = `<p>Você mora em <strong>${pais}!</strong></p>`
+                res2.innerHTML = `<p>Você é estrangeiro!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
