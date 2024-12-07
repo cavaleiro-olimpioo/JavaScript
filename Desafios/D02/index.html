@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="estilos/index.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <main>
+        <article>
+            <aside>
+                <label for="inas">Ano de Nascimento:</label>
+                <input type="number" name="nas" id="inas" required min="1900" max="2025"> <br>
+                <p id="inline">Sexo:</p>
+                <input type="radio" name="sexo" id="imasc" required checked>
+                <label for="imasc">Masculino</label>
+                <input type="radio" name="sexo" id="ifem" required>
+                <label for="ifem">Feminino</label> <br>
+                <input type="button" value="Verificar" id="submit" onclick="clicar()">
+            </aside>
+            <aside class="res">
+                <p class="res"></p>
+                <img src="" alt="" id="image">
+            </aside>
+        </article>
+    </main>
+    <footer>
+        <a href="https://github.com/cavaleiro-olimpioo" target="_blank">&copy; AppleHunters</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

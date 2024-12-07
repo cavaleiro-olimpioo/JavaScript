@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora certa</title>
+    <link rel="stylesheet" href="estilos/index.css">
+</head>
+
+
+<body>
+    <header>
+        <h1>Hora do dia:</h1>
+    </header>
+    <main>
+        <p id="hora">Agora são</p>
+        <img src="estilos/imagens/dia.jpg" id="dia" alt="Dia">
+        <img src="estilos/imagens/tarde.jpg" id="tarde" alt="Tarde">
+        <img src="estilos/imagens/noite.jpg" id="noite" alt="Noite">
+        <p id="bom">sim</p>
+    </main>
+    <footer>
+        <a href="https://github.com/cavaleiro-olimpioo/">© AppleHunters</a>
+    </footer>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var min = agora.getMinutes()
+        var ph = document.querySelector("p#hora")
+        var pb = document.querySelector('p#bom')
+        var dia = document.getElementById('dia')
+        var tarde = document.getElementById('tarde')
+        var noite = document.getElementById('noite')
+        var body = document.getElementsByTagName('body')[0]
+        ph.innerHTML = `<p>Agora são ${hora} horas e ${min} minutos</p>`
+        if (hora >= 5 && hora < 12){
+            document.getElementsByTagName('h1')[0].style.color = 'black'
+            body.style.background = 'yellow'
+            pb.innerHTML = 'Bom dia!'
+            dia.style.display = 'inline_block'
+            tarde.style.display = 'none'
+            noite.style.display = 'none'
+        }else{
+            if (hora >= 12 && hora < 19){
+                body.style.background = 'orange'
+                pb.innerHTML = 'Boa tarde!!'
+                dia.style.display = 'none'
+                tarde.style.display = 'inline_block'
+                noite.style.display = 'none'
+            }else{
+                if (hora >= 19 && hora <= 23){
+                    body.style.background = 'blue'
+                    pb.innerHTML = 'Boa noite!'
+                    dia.style.display = 'none'
+                    tarde.style.display = 'none'
+                    noite.style.display = 'inline_block'
+                }else{
+                    if  (hora >= 0 && hora < 5){
+                        body.style.background = 'darkblue'
+                        pb.innerHTML = 'Boa madrugada!'
+                        dia.style.display = 'none'
+                        tarde.style.display = 'none'
+                        noite.style.display = 'inline_block'
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
