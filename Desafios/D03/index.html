@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <main>
+        <article>
+            <aside>
+                <label for="iinicio">Início:</label> <!--Label de inicio-->
+                <input type="number" name="inicio" value="0" id="iinicio"> <br> <!--Input de inicio-->
+                <label for="ifim">Fim:</label> <!--Label de fim-->
+                <input type="number" name="fim" id="ifim" value="0"> <br> <!--Input de fim-->
+                <label for="ipasso">Passo:</label> <!--Label de passo-->
+                <input type="number" name="passo" value="0" id="ipasso"> <br> <!--Input de passo-->
+                <input type="button" value="Calcular" id="calc" onclick="clicar()">
+            </aside>
+            <aside>
+                <p>Preparando contagem...</p>
+            </aside>
+        </article>
+    </main>
+    <footer>
+        <a href="https://github.com/cavaleiro-olimpioo" target="_blank">
+            <p>&copy; AppleHunters</p>
+        </a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
